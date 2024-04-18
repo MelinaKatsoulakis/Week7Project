@@ -38,6 +38,51 @@ header {
   font-size: 16px;
 }
 
+main {
+  padding: 30px 0;
+}
+
+.weatherData {
+  display: flex;
+  justify-content: space-between;
+}
+
+.weatherCity {
+  margin: 0;
+  font-size: 38px;
+  line-height: 48px;
+}
+
+.weatherDetails {
+  font-size: 16px;
+  line-height: 24px;
+  color: rgba(39, 33, 66, 0.4);
+  font-weight: 500;
+}
+
+.weatherDetails strong {
+  color: #f75282;
+}
+.weatherTemperature {
+  display: flex;
+}
+
+.temperatureIcon {
+  font-size: 44px;
+  margin-top: 22px;
+}
+
+.temperatureNumber {
+  margin-left: 10px;
+  font-size: 85px;
+  font-weight: bold;
+}
+
+.temperatureUnit {
+  margin-top: 16px;
+  font-size: 28px;
+}
+
 footer {
   border-top: 1px solid #f9f7fe;
   padding: 30px 0 0 0;
