@@ -68,18 +68,18 @@ main {
 }
 
 .temperatureIcon {
-  font-size: 44px;
-  margin-top: 22px;
+  width: 70px;
+  height: 70px;
 }
 
 .temperatureNumber {
-  margin-left: 10px;
   font-size: 85px;
   font-weight: bold;
+  line-height: 88px;
 }
 
 .temperatureUnit {
-  margin-top: 16px;
+  margin-top: 6px;
   font-size: 28px;
 }
 
