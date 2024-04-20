@@ -15,12 +15,13 @@
   <body>
     <div class="fullText">
       <header>
-        <form class="searchForm">
+        <form class="searchForm" id="search-form">
           <input
             type="search"
             placeholder="Enter a city"
             required
             class="searchInput"
+            id="search-input"
           />
           <input type="submit" value="search" class="submitButton" />
         </form>
@@ -28,7 +29,7 @@
       <main>
         <div class="weatherData">
           <div>
-            <h1 class="weatherCity">Paris</h1>
+            <h1 class="weatherCity" id="city">Paris</h1>
             <p class="weatherDetails">
               Thursday 19:26, clear sky <br />
               Humidity: <strong>49%</strong>, Wind: <strong>2.57km/h</strong>
@@ -49,5 +50,6 @@
         and hosted by <a href="">Netlify</a>
       </footer>
     </div>
+    <script src="src/index.js"></script>
   </body>
 </html>
