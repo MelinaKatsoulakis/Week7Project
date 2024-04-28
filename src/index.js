@@ -59,30 +59,39 @@ searchFormElement.addEventListener("submit", handleSearchSubmit);
 
 searchCity("Paris");
 
-function displayForecast(response) {
-  console.log(response.data);
+function formatDay(timestamp) {
+  let date = new Date(timestamp * 1000);
 
-  let days = ["Tue", "Wed", "Thur", "Fri", "Sat"];
+  let days = ["Sun", "Mon", "Tue", "Wed", "Thur", "Fri", "Sat"];
+
+  return days[date.getDay()];
+}
+
+function displayForecast(response) {
   let forecastHtml = "";
 
-  days.forEach(function (day) {
-    forecastHtml =
-      forecastHtml +
-      `
+  response.data.daily.forEach(function (day, index) {
+    if (index < 5) {
+      forecastHtml =
+        forecastHtml +
+        `
           <div class="row">
               <div class="col-2">
-                <div class="weatherDate">${day}</div>
+                <div class="weatherDate">${formatDay(day.time)}</div>
                 <img
-                  src="http://shecodes-assets.s3.amazonaws.com/api/weather/icons/clear-sky-day.png"
-                  alt="sun"
-                  width="42"
-                />
+                  src="${day.condition.icon_url}"
+                class="forecastIcon" />
                 <div class="forecastTemp">
-                  <span class="forecastTempMax">18° </span>
-                  <span class="forecastTempMin"> 12° </span>
+                  <span class="forecastTempMax">${Math.round(
+                    day.temperature.maximum
+                  )} </span>
+                  <span class="forecastTempMin"> ${Math.round(
+                    day.temperature.minimum
+                  )}</span>
                 </div>
               </div>
             </div>`;
+    }
   });
   let forecastElement = document.querySelector("#forecast");
   forecastElement.innerHTML = forecastHtml;

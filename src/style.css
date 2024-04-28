@@ -91,6 +91,10 @@ main {
   justify-content: space-around;
 }
 
+.forecastIcon {
+  width: 50px;
+  text-align: center;
+}
 .weatherDate {
   font-size: 16px;
   opacity: 0.5;
