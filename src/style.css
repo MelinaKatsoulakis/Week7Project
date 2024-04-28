@@ -1,10 +1,10 @@
 body {
-  background-color: #f9f7fe;
+  background-color: #faf6ee;
   font-family: "Roboto", sans-serif;
 }
 
 .fullText {
-  background: white;
+  background: #c29870;
   max-width: 600px;
   margin: 45px auto;
   padding: 30px;
@@ -13,10 +13,10 @@ body {
 }
 
 a {
-  color: #885df1;
+  color: #faf6ee;
 }
 header {
-  border-bottom: 1px solid #f9f7fe;
+  border-bottom: 1px solid #faf6ee;
   padding: 0 0 30px 0;
 }
 .searchInput {
@@ -29,7 +29,7 @@ header {
 }
 
 .submitButton {
-  background: #885df1;
+  background: #a77a5b;
   padding: 15px 30px;
   border: none;
   border-radius: 6px;
@@ -56,20 +56,20 @@ main {
 .weatherDetails {
   font-size: 16px;
   line-height: 24px;
-  color: rgba(39, 33, 66, 0.4);
+  color: rgba(66, 55, 33, 0.479);
   font-weight: 500;
 }
 
 .weatherDetails strong {
-  color: #f75282;
+  color: #70523d;
 }
 .weatherTemperature {
   display: flex;
 }
 
 .temperatureIcon {
-  width: 70px;
-  height: 70px;
+  width: 90px;
+  height: 90px;
 }
 
 .temperatureNumber {
@@ -109,7 +109,7 @@ main {
 }
 
 footer {
-  border-top: 1px solid #f9f7fe;
+  border-top: 1px solid #faf6ee;
   padding: 30px 0 0 0;
   text-align: center;
   font-size: 14px;
